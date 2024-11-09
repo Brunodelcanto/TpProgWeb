@@ -91,3 +91,17 @@
     text-decoration: none;
   }
  
+  .container-icon{
+    position: relative;
+}
+
+.listaProductosCatalogo button{
+  background-color: #391d03;
+  color: #fff;
+}
+
+.listaProductosCatalogo button:hover{
+  background-color: #b5804e;
+  transition: 0.5s;
+  color: #000000;
+}

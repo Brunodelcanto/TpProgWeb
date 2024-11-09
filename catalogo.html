@@ -17,6 +17,14 @@
           src="images/LogoEmprendimiento-removebg-preview.png"
           alt="Logo de Ché el Mate"
         />
+        <div class="cart-container">
+          <button id="cart-button"><img src="images/carrito.png" alt=""><span id="cart-count">0</span></button>
+          <div class="cart-dropdown">
+            <h4>Mi Carrito</h4>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total-price">0.00</span></p>
+          </div>
+        </div>
     </div>
 
     <nav class="navbar">
@@ -25,7 +33,7 @@
         <a href="catalogo.html">Catalogo</a>
         <!-- <a href="carrito.html">Carrito</a> -->
         <a href="contacto.html">Contacto</a>
-        <a href="sobreNosotros.html">Sobre nosotros</a>
+        <!-- <a href="sobreNosotros.html">Sobre nosotros</a> -->
         <a href="tips.html">Tips</a>
       </div>
     </nav>
@@ -35,7 +43,6 @@
           <h2>Catalogo</h2>
         </div>
       
-        <!-- Filtro de categorías -->
         <div class="filter">
           <label for="productFilter">Filtrar por tipo:</label>
           <select id="productFilter" onchange="filterProducts()">
@@ -52,7 +59,8 @@
             <div class="card-body">
               <h5 class="card-title">Canastas materas</h5>
               <p class="card-text">Lorem ipsum dolor sit amet cons</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
+              <p class="price">$2000</p>
+              <button class="btn add-to-cart">Agregar al carrito</button>
             </div>
           </div>
       
@@ -61,35 +69,26 @@
             <div class="card-body">
               <h5 class="card-title">Combo</h5>
               <p class="card-text">Lorem ipsum dolor sit amet cons</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
+              <p class="price">$3500</p>
+              <button class="btn add-to-cart">Agregar al carrito</button>
             </div>
-          </div>
+            </div>
       
           <div class="card mates" style="width: 18rem;">
             <img src="images/mates.jpeg" class="card-img-top" alt="Mates">
             <div class="card-body">
               <h5 class="card-title">Mates</h5>
               <p class="card-text">Lorem ipsum dolor sit amet cons</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
+              <p class="price">$1500</p>
+              <button class="btn add-to-cart">Agregar al carrito</button>
             </div>
           </div>
           
         </div>
       </div>
       
-      <script>
-        function filterProducts() {
-          const filter = document.getElementById("productFilter").value;
-          const products = document.querySelectorAll(".card");
-      
-          products.forEach((product) => {
-            if (filter === "all" || product.classList.contains(filter)) {
-              product.style.display = "block";
-            } else {
-              product.style.display = "none";
-            }
-          });
-        }
+      <script src="js/index.js">
+
       </script>
     </main>
     <footer>

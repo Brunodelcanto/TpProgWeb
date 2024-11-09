@@ -16,6 +16,14 @@
           src="images/LogoEmprendimiento-removebg-preview.png"
           alt="Logo de Ché el Mate"
         />
+        <div class="cart-container">
+          <button id="cart-button"><img src="images/carrito.png" alt=""><span id="cart-count">0</span></button>
+          <div class="cart-dropdown">
+            <h4>Mi Carrito</h4>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total-price">0.00</span></p>
+          </div>
+        </div>
     </div>
 
     <nav class="navbar">
@@ -24,7 +32,7 @@
         <a href="catalogo.html">Catalogo</a>
         <!-- <a href="carrito.html">Carrito</a> -->
         <a href="contacto.html">Contacto</a>
-        <a href="sobreNosotros.html">Sobre nosotros</a>
+        <!-- <a href="sobreNosotros.html">Sobre nosotros</a> -->
         <a href="tips.html">Tips</a>
       </div>
     </nav>
@@ -32,9 +40,9 @@
     <main>
     <div class="informacion">
       <ul>
-        <li><p>¡Podes abonar en efectivo o con transferencia!<img src="images/metodo-de-pago.png" alt=""></p></li>
-        <li><p>¡Envios a todo el pais!<img src="images/receptor.png" alt=""></p></li>
-        <li><p>¡Venta minorista!<img src="images/venta-minorista.png" alt=""></p></li>
+        <li><p>Todos los medios de pago<img src="images/metodo-de-pago.png" alt=""></p></li>
+        <li><p>Envios a todo el país<img src="images/receptor.png" alt=""></p></li>
+        <li><p>Venta minorista<img src="images/venta-minorista.png" alt=""></p></li>
       </ul>
     </div>
 
@@ -43,32 +51,35 @@
         <h2>Nuestros productos:</h2>
       </div>
       <div class="listaProductos">
-      <div class="card" style="width: 18rem;">
-        <img src="images/canastas.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Canastas materas</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet cons</p>
-          <a href="#" class="btn btn-primary">Comprar</a>
+        <div class="card canastas" style="width: 18rem;">
+          <img src="images/canastas.jpeg" class="card-img-top" alt="Canastas materas">
+          <div class="card-body">
+            <h5 class="card-title">Canastas materas</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet cons</p>
+            <p class="price">$2000</p>
+            <button class="btn add-to-cart">Agregar al carrito</button>
+          </div>
         </div>
-      </div>
 
-      <div class="card" style="width: 18rem;">
-        <img src="images/combo.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Combo</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet cons</p>
-          <a href="#" class="btn btn-primary">Comprar</a>
-        </div>
-      </div>
+        <div class="card combo" style="width: 18rem;">
+          <img src="images/combo.jpeg" class="card-img-top" alt="Combo">
+          <div class="card-body">
+            <h5 class="card-title">Combo</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet cons</p>
+            <p class="price">$3500</p>
+            <button class="btn add-to-cart">Agregar al carrito</button>
+          </div>
+          </div>
  
-      <div class="card" style="width: 18rem;">
-        <img src="images/mates.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Mates</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet cons</p>
-          <a href="#" class="btn btn-primary">Comprar</a>
-        </div>
-      </div>
+          <div class="card mates" style="width: 18rem;">
+            <img src="images/mates.jpeg" class="card-img-top" alt="Mates">
+            <div class="card-body">
+              <h5 class="card-title">Mates</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet cons</p>
+              <p class="price">$1500</p>
+              <button class="btn add-to-cart">Agregar al carrito</button>
+            </div>
+          </div>
       
     </div>
         
@@ -78,7 +89,7 @@
     <div class="instagram">
       <h3>Nuestro instagram</h3>
       <p>@che_el_mate</p>
-      <button>Seguinos en instagram</button>
+      <button><a href="https://www.instagram.com/che_el_mate" target="_blank">Seguinos en instagram</a></button>
     </div>
   </main>
     <footer>
@@ -98,5 +109,6 @@
         </ul>
       </div>
     </footer>
+    <script src="js/index.js"></script>
   </body>
 </html>
