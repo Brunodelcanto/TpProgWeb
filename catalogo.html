@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/home.css">
+        <link rel="stylesheet" href="styles/catalogo.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <title>Ché el Mate</title>
+      </head>
+<body>
+    <div class="header">
+        <img
+          src="images/LogoEmprendimiento-removebg-preview.png"
+          alt="Logo de Ché el Mate"
+        />
+    </div>
+
+    <nav class="navbar">
+      <div class="navLinks">
+        <a href="home.html">Home</a>
+        <a href="catalogo.html">Catalogo</a>
+        <!-- <a href="carrito.html">Carrito</a> -->
+        <a href="contacto.html">Contacto</a>
+        <a href="sobreNosotros.html">Sobre nosotros</a>
+        <a href="tips.html">Tips</a>
+      </div>
+    </nav>
+    <main>
+      <div class="productosCatalogo">
+        <div class="title">
+          <h2>Catalogo</h2>
+        </div>
+      
+        <!-- Filtro de categorías -->
+        <div class="filter">
+          <label for="productFilter">Filtrar por tipo:</label>
+          <select id="productFilter" onchange="filterProducts()">
+            <option value="all">Todos</option>
+            <option value="canastas">Canastas</option>
+            <option value="combo">Combo</option>
+            <option value="mates">Mates</option>
+          </select>
+        </div>
+      
+        <div class="listaProductosCatalogo">
+          <div class="card canastas" style="width: 18rem;">
+            <img src="images/canastas.jpeg" class="card-img-top" alt="Canastas materas">
+            <div class="card-body">
+              <h5 class="card-title">Canastas materas</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet cons</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+      
+          <div class="card combo" style="width: 18rem;">
+            <img src="images/combo.jpeg" class="card-img-top" alt="Combo">
+            <div class="card-body">
+              <h5 class="card-title">Combo</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet cons</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+      
+          <div class="card mates" style="width: 18rem;">
+            <img src="images/mates.jpeg" class="card-img-top" alt="Mates">
+            <div class="card-body">
+              <h5 class="card-title">Mates</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet cons</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <script>
+        function filterProducts() {
+          const filter = document.getElementById("productFilter").value;
+          const products = document.querySelectorAll(".card");
+      
+          products.forEach((product) => {
+            if (filter === "all" || product.classList.contains(filter)) {
+              product.style.display = "block";
+            } else {
+              product.style.display = "none";
+            }
+          });
+        }
+      </script>
+    </main>
+    <footer>
+        <div class="redes">
+          <button class="facebookFooter"><img src="images/facebook.png" alt=""></button>
+          <button class="instagramFooter"><img src="images/instagram.png" alt=""></button>
+          <button class="tiktokFooter"><img src="images/tiktok.png" alt=""></button>
+        </div>
+        <div class="logo">
+          <img src="images/LogoEmprendimiento-removebg-preview.png" alt="">
+        </div>
+        <div class="informacionFooter">
+          <ul>
+            <li><a href="">3476371430</a></li>
+            <li><a href="">cheelmate19@gmail.com</a></li>
+            <li><a href="">San Lorenzo, Santa Fe.</a></li>
+          </ul>
+        </div>
+      </footer>
+</body>
+</html>

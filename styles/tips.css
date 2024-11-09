@@ -1,0 +1,55 @@
+/* Contenedor principal */
+.Contenedor {
+    text-align: center;
+  }
+  
+  /* Títulos y subtítulos */
+  h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    color: #555;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para las listas */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .Opcion1, .Opcion2 {
+    margin-bottom: 20px;
+  }
+  
+  .tips {
+    font-size: 16px;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: left;
+  }
+  
+  /* Imágenes */
+  .imagenes {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }

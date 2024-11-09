@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .products{
+    text-align: center;
+    border: 1px solid #B5804E;
+  }
+
+  .products h2{
+    padding: 20px;
+  }
+
+  .productList {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+
+  .product{
+    border: 1px solid #B5804E;
+    border-radius: 10%;
+  }
+
+  .header {
+    text-align: center;
+    background-color: #391D03;
+  }
+
+  .header h1{
+    color: #FFFFFF;
+  }
+
+  .header img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .navbar{
+    background-color: #B5804E;
+  }
+
+  .navLinks{
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   padding: 5px; 
+  }
+
+  .navLinks a {
+    list-style: none;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  .navLinks a:hover{
+    color: #391D03;
+    transition: 0.5s;
+  }
+
+  .informacion{
+    background-color: #614936;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .informacion ul {
+    display: flex;
+    justify-content: space-evenly;
+    color: #FFFFFF;
+    list-style: none;
+  }
+
+  .instagram{
+    text-align: center;
+    background-color: #B5804E;
+    padding: 100px;
+    color: #FFFFFF;
+    justify-content: space-between;
+  }
+
+  .instagram button{
+   border-radius: 10px;
+   border: none;
+   background-color: #391D03;
+   height: 50px;
+   width: 100px;
+   color: #FFFFFF;
+   
+  }
+
+  .instagram button:hover{
+    background-color: #614936;
+    transition: 0.5s;
+  }
+  
+  footer{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #391D03;
+    align-items: center;
+    text-align: center;
+  }
+
+ .logo img{
+  height: 50px;
+  width: 50px;
+ }
+
+ .logo img:hover{
+  height: 60px;
+  width: 60px;
+ }
+
+.redes{
+  display: flex;
+  gap: 30px ;
+  height: 50px;
+  width: 50px;
+  }
+
+ .redes button{
+  all:unset;
+  cursor: pointer;
+ }
+
+ .redes button:hover{
+  height: 60px;
+  width: 60px;
+  transition: 0.5s;
+ }
+
+ .informacionFooter ul{
+  list-style: none;
+ }
+
+ .informacionFooter ul a{
+  text-decoration: none;
+  color: #B5804E;
+ }
+
+ .informacionFooter ul a:hover{
+  color: #614936;
+  transition: 0.5s;
+ }
+ 
+ .listaProductos{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+ }
+
+ .card{
+  width: 18rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+ }
+
+ .card a{
+  background-color: #391D03;
+  border: #391D03;
+ }
+
+ .card a:hover{
+  background-color: #614936;
+  transition: 0.5s;
+ }
+
+ .card:hover {
+  transform: translateY(-5px);
+}
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+}
