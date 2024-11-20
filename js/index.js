@@ -84,4 +84,8 @@ addToCartButtons.forEach(button => {
   button.addEventListener("click", addToCart);
 });
 
+
+function redes(url){
+  window.location.href = url;
+}
   

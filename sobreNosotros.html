@@ -11,11 +11,23 @@
         <title>Ché el Mate</title>
       </head>
 <body>
+  <body>
     <div class="header">
+      <div class="nombreEmpredimiento">
+        <h4>Ché el mate</h4>
+      </div>
         <img
           src="images/LogoEmprendimiento-removebg-preview.png"
           alt="Logo de Ché el Mate"
         />
+        <div class="cart-container">
+          <button id="cart-button"><img src="images/carrito.png" alt=""><span id="cart-count">0</span></button>
+          <div class="cart-dropdown">
+            <h4>Mi Carrito</h4>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total-price">0.00</span></p>
+          </div>
+        </div>
     </div>
 
     <nav class="navbar">
@@ -32,21 +44,22 @@
 
     </main>
     <footer>
-        <div class="redes">
-          <button class="facebookFooter"><img src="images/facebook.png" alt=""></button>
-          <button class="instagramFooter"><img src="images/instagram.png" alt=""></button>
-          <button class="tiktokFooter"><img src="images/tiktok.png" alt=""></button>
-        </div>
+      <div class="redes">
+        <button class="facebookFooter" onclick="redes('https://www.facebook.com/profile.php?id=61559624066058')"><img src="images/facebook.png" alt=""></button>
+        <button class="instagramFooter" onclick="redes('https://www.instagram.com/che_el_mate')"><img src="images/instagram.png" alt=""></button>
+        <button class="tiktokFooter" onclick="redes('https://www.tiktok.com/@che.el.mate')"><img src="images/tiktok.png" alt=""></button>
+      </div>
         <div class="logo">
           <img src="images/LogoEmprendimiento-removebg-preview.png" alt="">
         </div>
         <div class="informacionFooter">
           <ul>
-            <li><a href="">3476371430</a></li>
+            <li><a href="https://wa.me/c/5493476207812">3476207812</a></li>
             <li><a href="">cheelmate19@gmail.com</a></li>
             <li><a href="">San Lorenzo, Santa Fe.</a></li>
           </ul>
         </div>
       </footer>
+      <script src="js/index.js"></script>
 </body>
 </html>
