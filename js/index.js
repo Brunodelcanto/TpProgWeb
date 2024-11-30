@@ -34,7 +34,7 @@ function updateCart() {
 
     listItem.innerHTML = `
       <img src="${item.image}" alt="${item.name}">
-      <span>${item.name} (x${item.quantity}) - $${(item.price * item.quantity).toFixed(2)}</span>
+      <span>${item.name} (x${item.quantity}) - $${(item.price * item.quantity)}</span>
       <button onclick="removeFromCart(${index})">X</button>
     `;
 
