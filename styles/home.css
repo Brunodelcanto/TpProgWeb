@@ -194,6 +194,7 @@ footer {
 .card:hover {
   transform: translateY(-5px);
 }
+
 .btn {
   display: block;
   width: 100%;

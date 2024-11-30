@@ -1,9 +1,10 @@
-// Filtro de productos
+//Funcion de filtrado de productos
 function filterProducts() {
-    const filter = document.getElementById("productFilter").value;
-    const products = document.querySelectorAll(".card");
+    const filter = document.getElementById("productFilter").value; //obtenemos el valor del filtro
+    const products = document.querySelectorAll(".card"); //seleccionamos todos los productos
 
     products.forEach((product) => {
+      //si el filtro seleccionado es "all" o si el producto esta dentro de nuestra lista de filtrado
       if (filter === "all" || product.classList.contains(filter)) {
         product.style.display = "block";
       } else {
@@ -12,22 +13,24 @@ function filterProducts() {
     });
   }
 
-  const cartButton = document.getElementById("cart-button");
+//almacenamos los elementos del dom en constantes
+const cartButton = document.getElementById("cart-button");
 const cartCount = document.getElementById("cart-count");
 const cartItems = document.getElementById("cart-items");
 const totalPrice = document.getElementById("total-price");
 const addToCartButtons = document.querySelectorAll(".add-to-cart");
 
+//variables para el carrito
 let cart = [];
 let total = 0;
 
-// Función para actualizar el carrito
+
 function updateCart() {
   cartItems.innerHTML = "";
   total = 0;
 
   cart.forEach((item, index) => {
-    const listItem = document.createElement("li");
+    const listItem = document.createElement("li"); //crea un nuevo elemento en la lista
 
     listItem.innerHTML = `
       <img src="${item.image}" alt="${item.name}">
@@ -35,56 +38,58 @@ function updateCart() {
       <button onclick="removeFromCart(${index})">X</button>
     `;
 
-    cartItems.appendChild(listItem);
-    total += item.price * item.quantity;
+    cartItems.appendChild(listItem); //añade a la lista
+    total += item.price * item.quantity; //calcula el precio total
   });
 
-  cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0); // Suma de todas las cantidades
-  totalPrice.textContent = total.toFixed(2);
+  cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0); //actualiza la cantidad de productos
+  totalPrice.textContent = total;
 }
 
-// Función para agregar productos al carrito
-function addToCart(event) {
-  const card = event.target.closest(".card");
-  const name = card.querySelector(".card-title").textContent;
-  const price = parseFloat(card.querySelector(".price").textContent.replace("$", ""));
-  const image = card.querySelector("img").src;
 
-  // Busca si el producto ya existe en el carrito
-  const existingItem = cart.find(item => item.name === name);
+function addToCart(event) {
+  const card = event.target.closest(".card"); //tarjeta del producto a la que se le hizo click
+  const name = card.querySelector(".card-title").textContent;
+  const price = parseFloat(card.querySelector(".price").textContent.replace("$", "")); 
+  const image = card.querySelector("img").src;
+  
+
+  const existingItem = cart.find(item => item.name === name);//buscamos si existe un producto en el carrito con el mismo nombre
 
   if (existingItem) {
-    // Si el producto ya está en el carrito, incrementa la cantidad
-    existingItem.quantity += 1;
+  
+    existingItem.quantity += 1; //si existe incrementamos la cantidad
   } else {
-    // Si el producto no está en el carrito, agrégalo con cantidad inicial 1
-    cart.push({ name, price, image, quantity: 1 });
+
+    cart.push({ name, price, image, quantity: 1 }); //si no lo agregamos con push
   }
 
   updateCart();
 }
 
-// Función para eliminar productos del carrito
+
 function removeFromCart(index) {
-  const item = cart[index];
+  const item = cart[index]; //utilizamos el indice para obtener el producto del carrito
 
   if (item.quantity > 1) {
-    // Si la cantidad es mayor a 1, simplemente reduce la cantidad
-    item.quantity -= 1;
+  
+    item.quantity -= 1; //si hay mas de uno disminuimos la cantidad
   } else {
-    // Si la cantidad es 1, elimina el producto del carrito
-    cart.splice(index, 1);
+
+    cart.splice(index, 1); //si solo hay 1, eliminamos el producto con splice
   }
 
   updateCart();
 }
 
-// Agrega el evento a cada botón "Agregar al carrito"
+
+// agregamos el evento click a los botones para ejecutar la funcion addToCart
 addToCartButtons.forEach(button => {
-  button.addEventListener("click", addToCart);
+  button.addEventListener("click", addToCart); 
 });
 
 
+//funcion para redirigir a la url proporcionada
 function redes(url){
   window.location.href = url;
 }
